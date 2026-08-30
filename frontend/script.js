@@ -184,19 +184,27 @@ if (contactEmail) {
 
         const email = contactEmail.dataset.email;
 
-        const subject = "Portfolio Inquiry";
+        const isMobile =
+            /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        const body = `Hello Azka,
+        /*
+         * Android + iOS
+         * Buka aplikasi email melalui mailto:
+         */
+        if (isMobile) {
+            window.location.href =
+                `mailto:${encodeURIComponent(email)}`;
 
-I would like to discuss a project with you.
+            return;
+        }
 
-Best regards,`;
-
+        /*
+         * Desktop
+         * Buka Gmail Compose di browser
+         */
         const gmailUrl =
-            `https://mail.google.com/mail/?view=cm&fs=1` +
-            `&to=${encodeURIComponent(email)}` +
-            `&su=${encodeURIComponent(subject)}` +
-            `&body=${encodeURIComponent(body)}`;
+            "https://mail.google.com/mail/?view=cm&fs=1" +
+            `&to=${encodeURIComponent(email)}`;
 
         window.open(
             gmailUrl,
