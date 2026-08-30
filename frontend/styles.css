@@ -264,7 +264,7 @@ img {
 
 .photo-frame {
     position: relative;
-    width: 100%;
+    width: 90%;
     aspect-ratio: 4 / 5;
     overflow: hidden;
     background: var(--black-soft);
@@ -356,6 +356,35 @@ img {
     user-select: none;
 }
 
+.section-watermark-projects {
+    position: absolute;
+    top: 28px;
+    left: 38%;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.024);
+    font-size: clamp(150px, 16vw, 250px);
+    font-weight: 900;
+    line-height: .78;
+    letter-spacing: -.09em;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+
+.section-watermark-contact {
+    position: absolute;
+    top: 28px;
+    left: 38%;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.024);
+    font-size: clamp(150px, 16vw, 250px);
+    font-weight: 900;
+    line-height: .78;
+    letter-spacing: -.09em;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
 
 /* =========================================================
    ABOUT
@@ -936,6 +965,7 @@ img {
     */
     .hero-title {
         width: fit-content;
+        margin-left: 20px;
         max-width: 100%;
         font-size: clamp(38px, 10.8vw, 52px);
         line-height: .88;
@@ -943,6 +973,7 @@ img {
     }
 
     .hero-description {
+        margin-left: 20px;
         width: 100%;
         max-width: 100%;
         margin-top: 16px;
@@ -956,7 +987,11 @@ img {
     }
 
     .photo-frame {
-        width: 100%;
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 
     .hero-actions {
@@ -968,6 +1003,7 @@ img {
     .button {
         min-height: 37px;
         padding: 0 11px;
+        margin-left: 20px;
         font-size: 8px;
         gap: 6px;
     }
@@ -978,6 +1014,18 @@ img {
     .section-watermark {
         top: 18px;
         left: 8%;
+        font-size: 105px;
+    }
+
+    .section-watermark-projects {
+        top: 18px;
+        left: -2%;
+        font-size: 105px;
+    }
+
+    .section-watermark-contact {
+        top: 18px;
+        left: -8%;
         font-size: 105px;
     }
 
