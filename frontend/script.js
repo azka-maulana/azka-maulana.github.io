@@ -176,6 +176,36 @@
 
 })();
 
+const contactEmail = document.querySelector(".contact-email");
+
+if (contactEmail) {
+    contactEmail.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const email = contactEmail.dataset.email;
+
+        const subject = "Portfolio Inquiry";
+
+        const body = `Hello Azka,
+
+I would like to discuss a project with you.
+
+Best regards,`;
+
+        const gmailUrl =
+            `https://mail.google.com/mail/?view=cm&fs=1` +
+            `&to=${encodeURIComponent(email)}` +
+            `&su=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(body)}`;
+
+        window.open(
+            gmailUrl,
+            "_blank",
+            "noopener,noreferrer"
+        );
+    });
+}
+
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {

@@ -128,17 +128,33 @@ img {
     background: rgba(140, 255, 0, 0.07);
 }
 
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.social-links {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
 .social-link {
     width: 24px;
     height: 24px;
+
     display: grid;
     place-items: center;
-    justify-self: end;
+
+    flex-shrink: 0;
 }
 
 .social-link img {
     width: 100%;
     height: 100%;
+
     object-fit: contain;
 }
 
@@ -641,6 +657,43 @@ img {
     line-height: 1.7;
 }
 
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 18px;
+
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 5px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-email span {
+    color: var(--lime);
+
+    transition:
+        transform 0.2s ease;
+}
+
+.contact-email:hover {
+    color: var(--lime);
+    border-color: var(--lime);
+}
+
+.contact-email:hover span {
+    transform: translate(3px, -3px);
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -830,11 +883,14 @@ img {
         white-space: nowrap;
     }
 
+    .social-links {
+        gap: 7px;
+    }
+
     .social-link {
         width: 18px;
         height: 18px;
     }
-
 
     /* HERO */
 
@@ -1110,6 +1166,10 @@ img {
     .main-nav a {
         padding-inline: 3px;
         font-size: 7px;
+    }
+
+    .social-links {
+        gap: 5px;
     }
 
     .social-link {
