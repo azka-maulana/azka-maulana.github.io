@@ -112,6 +112,25 @@ img {
     min-width: 0;
 }
 
+
+.brand {
+    justify-self: start;
+
+    display: flex;
+    align-items: center;
+
+    width: auto;
+    height: 28px;
+}
+
+.brand img {
+    display: block;
+
+    width: auto;
+    height: 100%;
+
+    object-fit: contain;
+}
 .main-nav a {
     padding: 8px 12px;
     color: var(--gray);
@@ -911,6 +930,28 @@ img {
         font-size: 8px;
         white-space: nowrap;
     }
+
+
+@media (max-width: 600px) {
+
+    .brand {
+        height: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand {
+        height: 18px;
+    }
+
+}
 
     .social-links {
         gap: 7px;
